@@ -1,0 +1,29 @@
+uuid: d42a4951-ffda-4f20-a848-e62d4f2f1aec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_level_played
+    - node.type.tournament
+    - taxonomy.vocabulary.tournament_level
+id: node.tournament.field_level_played
+field_name: field_level_played
+entity_type: node
+bundle: tournament
+label: 'Level Played'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tournament_level: tournament_level
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

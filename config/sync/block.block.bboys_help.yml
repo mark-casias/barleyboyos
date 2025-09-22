@@ -1,0 +1,22 @@
+uuid: 762c5873-1b5a-4b07-bd7b-5e9abdf2ff0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bboys
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: bboys_help
+theme: bboys
+region: breadcrumb
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

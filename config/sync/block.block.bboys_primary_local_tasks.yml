@@ -1,0 +1,22 @@
+uuid: ba76e730-fab1-4f86-bb4b-534f0766d6e7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bboys
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: bboys_primary_local_tasks
+theme: bboys
+region: featured
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

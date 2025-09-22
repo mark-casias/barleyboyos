@@ -1,0 +1,22 @@
+uuid: cc30a89a-1d07-41bc-876d-51879c429b93
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bboys
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: bboys_breadcrumbs
+theme: bboys
+region: breadcrumb
+weight: -5
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

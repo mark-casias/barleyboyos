@@ -1,0 +1,44 @@
+uuid: 2c60199a-3600-4911-90e8-61892a1d4b92
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.minimal
+    - field.field.paragraph.tournament_player.field_tournament_number
+    - field.field.paragraph.tournament_player.field_tournament_player
+    - paragraphs.paragraphs_type.tournament_player
+  module:
+    - inline_entity_form
+id: paragraph.tournament_player.default
+targetEntityType: paragraph
+bundle: tournament_player
+mode: default
+content:
+  field_tournament_number:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_tournament_player:
+    type: inline_entity_form_complex
+    weight: 1
+    region: content
+    settings:
+      form_mode: minimal
+      override_labels: true
+      label_singular: Player
+      label_plural: Players
+      allow_new: false
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,29 @@
+uuid: 5f66954c-b186-411a-9007-82ff6cc72919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tournament_player
+    - node.type.player
+    - paragraphs.paragraphs_type.tournament_player
+id: paragraph.tournament_player.field_tournament_player
+field_name: field_tournament_player
+entity_type: paragraph
+bundle: tournament_player
+label: 'Tournament Player'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      player: player
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,7 @@
+[data-component-id="bboys:tournament_player"] {
+  display: flex;
+
+  .number {
+    padding-right: 0.25rem;
+  }
+}

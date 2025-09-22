@@ -1,0 +1,20 @@
+uuid: f9feeba0-7aac-4d40-aac8-e271dcee7a08
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bboys
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: bboys_primary_admin_actions
+theme: bboys
+region: featured
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

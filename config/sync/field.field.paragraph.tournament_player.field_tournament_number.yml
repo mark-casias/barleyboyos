@@ -1,0 +1,23 @@
+uuid: 0e4c950b-5a70-4382-91f3-b94d42beb3fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tournament_number
+    - paragraphs.paragraphs_type.tournament_player
+id: paragraph.tournament_player.field_tournament_number
+field_name: field_tournament_number
+entity_type: paragraph
+bundle: tournament_player
+label: 'Tournament Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

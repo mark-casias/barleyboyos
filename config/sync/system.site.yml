@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: 3fcee16e-d4ae-483e-9a8a-c86697694753
+name: 'Barley Boyos'
+mail: admin@example.com
+slogan: 'Shut up Rob'
+page:
+  403: ''
+  404: ''
+  front: /tournaments
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

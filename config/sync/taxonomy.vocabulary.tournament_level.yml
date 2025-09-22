@@ -1,0 +1,9 @@
+uuid: 90d817a3-c0c2-4ddb-9112-ca949d1ba102
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tournament Level'
+vid: tournament_level
+description: null
+weight: 0
+new_revision: false

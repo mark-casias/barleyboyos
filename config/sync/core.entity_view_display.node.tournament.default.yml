@@ -1,0 +1,60 @@
+uuid: e5d8c4a5-653d-4124-9523-6ffc3fb8ad99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tournament.field_date
+    - field.field.node.tournament.field_description
+    - field.field.node.tournament.field_level_played
+    - field.field.node.tournament.field_main_photo
+    - field.field.node.tournament.field_players
+    - field.field.node.tournament.field_tournament_player
+    - node.type.tournament
+  module:
+    - datetime_range
+    - text
+    - user
+id: node.tournament.default
+targetEntityType: node
+bundle: tournament
+mode: default
+content:
+  field_date:
+    type: daterange_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      from_to: both
+      separator: '-'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_main_photo:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_players:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_level_played: true
+  field_tournament_player: true
+  links: true

@@ -1,0 +1,10 @@
+uuid: 49d281f1-7016-4445-91fa-a53f50fbb348
+langcode: en
+status: true
+dependencies: {  }
+id: tournament_player
+label: 'Tournament Player'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

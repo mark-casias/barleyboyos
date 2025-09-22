@@ -1,0 +1,108 @@
+uuid: f7f066bf-0543-4eb5-a160-d2b4465eee6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.minimal
+    - field.field.node.tournament.field_date
+    - field.field.node.tournament.field_description
+    - field.field.node.tournament.field_level_played
+    - field.field.node.tournament.field_main_photo
+    - field.field.node.tournament.field_players
+    - field.field.node.tournament.field_tournament_player
+    - node.type.tournament
+  module:
+    - datetime_range
+    - inline_entity_form
+    - media_library
+    - path
+    - text
+id: node.tournament.default
+targetEntityType: node
+bundle: tournament
+mode: default
+content:
+  field_date:
+    type: daterange_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_level_played:
+    type: inline_entity_form_complex
+    weight: 1
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  field_main_photo:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_players:
+    type: inline_entity_form_complex
+    weight: 4
+    region: content
+    settings:
+      form_mode: minimal
+      override_labels: true
+      label_singular: Player
+      label_plural: Player
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_tournament_player: true
+  promote: true
+  sticky: true
+  uid: true

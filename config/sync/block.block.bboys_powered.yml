@@ -1,0 +1,22 @@
+uuid: dfb6af66-38b1-4ac6-80ad-6ca1c25d17d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bboys
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: bboys_powered
+theme: bboys
+region: footer
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: e989eb30-d6c3-4f0e-b7a3-73d21506e413
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - bboys
+_core:
+  default_config_hash: pbbed0hdqGDF-_QWVVTWRAwgDIotFuAvWH5mWUZu0fA
+id: bboys_search_form_wide
+theme: bboys
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

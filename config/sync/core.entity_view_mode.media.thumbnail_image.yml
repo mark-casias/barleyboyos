@@ -1,0 +1,11 @@
+uuid: 5ca6ec53-f4ba-4168-b65b-d18b230410ff
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumbnail_image
+label: 'Thumbnail Image'
+description: null
+targetEntityType: media
+cache: true

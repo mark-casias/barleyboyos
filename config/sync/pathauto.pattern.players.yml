@@ -1,0 +1,22 @@
+uuid: 9f01197b-91a8-427c-8665-256a40b29f33
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: players
+label: Players
+type: 'canonical_entities:node'
+pattern: '/players/[node:title]'
+selection_criteria:
+  39d33b3c-4c4a-4471-9cd7-e46a703e2c9e:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 39d33b3c-4c4a-4471-9cd7-e46a703e2c9e
+    context_mapping:
+      node: node
+    bundles:
+      player: player
+selection_logic: and
+weight: -10
+relationships: {  }

@@ -1,0 +1,33 @@
+uuid: ea8fbdca-1e06-4609-b9d9-927d9ef27956
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.player.field_email
+    - field.field.node.player.field_first_name
+    - field.field.node.player.field_last_name
+    - field.field.node.player.field_number
+    - field.field.node.player.field_telephone
+    - node.type.player
+  module:
+    - user
+id: node.player.default
+targetEntityType: node
+bundle: player
+mode: default
+content:
+  field_number:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_email: true
+  field_first_name: true
+  field_last_name: true
+  field_telephone: true
+  links: true

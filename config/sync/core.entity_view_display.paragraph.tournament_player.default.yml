@@ -1,0 +1,41 @@
+uuid: 23a7859e-1ad4-43de-bd70-d84de9752b01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tournament_player.field_tournament_number
+    - field.field.paragraph.tournament_player.field_tournament_player
+    - paragraphs.paragraphs_type.tournament_player
+  module:
+    - nomarkup
+id: paragraph.tournament_player.default
+targetEntityType: paragraph
+bundle: tournament_player
+mode: default
+content:
+  field_tournament_number:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 0
+    region: content
+  field_tournament_player:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+    weight: 1
+    region: content
+hidden: {  }

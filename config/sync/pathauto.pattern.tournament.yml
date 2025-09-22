@@ -1,0 +1,22 @@
+uuid: 6764c691-41bb-4a80-9314-2ef3ce229401
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: tournament
+label: Tournament
+type: 'canonical_entities:node'
+pattern: '/tournament/[node:title]-[node:field_date:start_date:custom:Y]'
+selection_criteria:
+  b8fe784b-09a5-4365-9295-153deba04125:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: b8fe784b-09a5-4365-9295-153deba04125
+    context_mapping:
+      node: node
+    bundles:
+      tournament: tournament
+selection_logic: and
+weight: -9
+relationships: {  }
