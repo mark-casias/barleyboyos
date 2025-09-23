@@ -1,0 +1,17 @@
+[data-component-id="bboys:tournament-teaser"] {
+  text-align: center;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .field--name-field-main-photo {
+    margin-block-end: 1rem;
+  }
+
+  img {
+    height: 12rem;
+    border-radius: 3rem;
+    margin: 0 auto;
+  }
+}
