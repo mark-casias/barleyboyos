@@ -15,7 +15,6 @@ dependencies:
     - datetime_range
     - layout_builder
     - nomarkup
-    - text
     - user
 third_party_settings:
   layout_builder:
@@ -28,21 +27,18 @@ mode: teaser
 content:
   field_date:
     type: daterange_default
-    label: inline
+    label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: olivero_medium
       from_to: both
       separator: '-'
-    third_party_settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: ''
     weight: 1
-    region: content
-  field_description:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
     region: content
   field_main_photo:
     type: entity_reference_entity_view
@@ -58,6 +54,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_description: true
   field_level_played: true
   field_players: true
   field_tournament_player: true
