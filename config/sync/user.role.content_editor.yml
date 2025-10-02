@@ -3,12 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - media.type.image
+    - media.type.remote_video
     - node.type.article
     - node.type.page
+    - node.type.player
+    - node.type.tournament
     - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.tournament_level
   module:
     - contextual
     - file
+    - filter
+    - media
     - node
     - path
     - system
@@ -25,21 +34,87 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer taxonomy'
   - 'administer url aliases'
+  - 'change own username'
   - 'create article content'
+  - 'create image media'
+  - 'create media'
   - 'create page content'
+  - 'create player content'
+  - 'create remote_video media'
   - 'create terms in tags'
+  - 'create terms in tournament_level'
+  - 'create tournament content'
   - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete all taxonomy revisions'
+  - 'delete any article content'
+  - 'delete any image media'
+  - 'delete any image media revisions'
+  - 'delete any player content'
+  - 'delete any remote_video media'
+  - 'delete any remote_video media revisions'
+  - 'delete any tournament content'
   - 'delete article revisions'
+  - 'delete media'
   - 'delete own article content'
   - 'delete own files'
+  - 'delete own image media'
   - 'delete own page content'
+  - 'delete own player content'
+  - 'delete own remote_video media'
+  - 'delete own tournament content'
   - 'delete page revisions'
+  - 'delete player revisions'
+  - 'delete term revisions in tags'
+  - 'delete term revisions in tournament_level'
+  - 'delete terms in tags'
+  - 'delete terms in tournament_level'
+  - 'delete tournament revisions'
+  - 'edit any article content'
+  - 'edit any image media'
+  - 'edit any page content'
+  - 'edit any player content'
+  - 'edit any remote_video media'
+  - 'edit any tournament content'
   - 'edit own article content'
+  - 'edit own image media'
   - 'edit own page content'
+  - 'edit own player content'
+  - 'edit own remote_video media'
+  - 'edit own tournament content'
   - 'edit terms in tags'
+  - 'edit terms in tournament_level'
   - 'revert all revisions'
+  - 'revert all taxonomy revisions'
+  - 'revert any image media revisions'
+  - 'revert any remote_video media revisions'
+  - 'revert article revisions'
+  - 'revert page revisions'
+  - 'revert player revisions'
+  - 'revert term revisions in tags'
+  - 'revert term revisions in tournament_level'
+  - 'revert tournament revisions'
+  - 'update any media'
+  - 'update media'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view all media revisions'
   - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view any image media revisions'
+  - 'view any remote_video media revisions'
+  - 'view article revisions'
   - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view page revisions'
+  - 'view player revisions'
+  - 'view term revisions in tags'
+  - 'view term revisions in tournament_level'
   - 'view the administration theme'
+  - 'view tournament revisions'
+  - 'view vocabulary labels'
