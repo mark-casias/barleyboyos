@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_tags
     - node.type.article
   module:
+    - nomarkup
     - text
     - user
 _core:
@@ -24,18 +25,32 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: thumbnail_image
+      link: false
+    third_party_settings:
+      nomarkup:
+        enabled: false
+        separator: '|'
+        referenced_entity: '0'
     weight: 0
     region: content
   field_tags:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
+    weight: 2
     region: content
   links:
-    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
     region: content
-hidden:
-  field_image: true
+hidden: {  }

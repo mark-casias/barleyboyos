@@ -8,7 +8,7 @@ slogan: 'Shut up Rob'
 page:
   403: ''
   404: ''
-  front: /tournaments
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
