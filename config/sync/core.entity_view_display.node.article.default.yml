@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_image
+    - field.field.node.article.field_link
     - field.field.node.article.field_tags
     - node.type.article
   module:
@@ -41,9 +42,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
-hidden: {  }
+hidden:
+  field_link: true
+  links: true
