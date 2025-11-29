@@ -18,6 +18,10 @@
   ]
 %}
 
+{% if content.field_link|render %}
+  {% set url = content.field_link.0['#url'] %}
+{% endif %}
+
 
 {% embed "olivero:teaser" with {
   attributes: attributes.addClass(classes),
@@ -42,7 +46,7 @@
   {% block title %}
     {% if label and not page %}
       <h2{{ title_attributes.addClass('node__title', 'teaser__title') }}>
-        {{ label }}
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>
     {% endif %}
   {% endblock %}
@@ -50,7 +54,7 @@
     {{ content|without('field_image', 'field_link', 'links') }}
 
     {% if content.field_link|render %}
-      <a class="button" href="{{content.field_link.0['#url']}}">Read More</a>
+      <a class="button" href="{{url}}">Read More</a>
     {% endif %}
   {% endblock %}
 {% endembed %}
