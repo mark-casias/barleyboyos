@@ -3,30 +3,23 @@
  * @file
  * A bastarization of Olivero's theme implementation to display a node teaser.
  *
- * @see web/core/themes/olivero/templates/content/node--teaser.html.twigs
+ * @see web/core/themes/olivero/templates/content/node--teaser.html.twig
  */
 #}
 
-{%
-  set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  ]
-%}
+{% set classes = [
+  'node--type-' ~ node.bundle|clean_class,
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
 
 {% if content.field_link|render %}
   {% set url = content.field_link.0['#url'] %}
 {% endif %}
 
-
 {% embed "olivero:teaser" with {
   attributes: attributes.addClass(classes),
   content,
-  date,
   label,
   metadata,
   title_attributes,
@@ -38,9 +31,6 @@
   {% block prefix %}
     {{ title_prefix }}
     {{ title_suffix }}
-  {% endblock %}
-  {% block meta %}
-     {{ date }}
   {% endblock %}
   {% block image %}{{~ content.field_image ~}}{% endblock %}
   {% block title %}

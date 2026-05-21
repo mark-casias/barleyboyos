@@ -2,6 +2,8 @@ uuid: 9f01197b-91a8-427c-8665-256a40b29f33
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.player
   module:
     - node
 id: players
@@ -12,7 +14,6 @@ selection_criteria:
   39d33b3c-4c4a-4471-9cd7-e46a703e2c9e:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 39d33b3c-4c4a-4471-9cd7-e46a703e2c9e
     context_mapping:
       node: node
     bundles:
