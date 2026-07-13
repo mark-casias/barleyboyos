@@ -7,27 +7,93 @@ dependencies:
     - field.field.node.player.field_first_name
     - field.field.node.player.field_last_name
     - field.field.node.player.field_number
+    - field.field.node.player.field_player_picture
     - field.field.node.player.field_telephone
     - node.type.player
+    - views.view.player_tournaments
   module:
+    - layout_builder
+    - layout_discovery
     - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          ceb6921f-2b80-4f68-8be3-9d25ed1647d6:
+            uuid: ceb6921f-2b80-4f68-8be3-9d25ed1647d6
+            region: content
+            configuration:
+              id: 'field_block:node:player:field_number'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: hidden
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: false
+                third_party_settings:
+                  nomarkup:
+                    enabled: true
+                    separator: '|'
+                    referenced_entity: ''
+            weight: 0
+            additional: {  }
+          516cefda-aa5c-4a79-95c2-3a4714b12faf:
+            uuid: 516cefda-aa5c-4a79-95c2-3a4714b12faf
+            region: content
+            configuration:
+              id: 'field_block:node:player:field_player_picture'
+              label: 'Player Picture'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: thumbnail_image
+                third_party_settings:
+                  nomarkup:
+                    enabled: false
+                    separator: '|'
+                    referenced_entity: '0'
+            weight: 1
+            additional: {  }
+          e064b25e-bca3-4501-b417-e70ff1b101d2:
+            uuid: e064b25e-bca3-4501-b417-e70ff1b101d2
+            region: content
+            configuration:
+              id: 'views_block:player_tournaments-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: null
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 id: node.player.default
 targetEntityType: node
 bundle: player
 mode: default
-content:
-  field_number:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 0
-    region: content
+content: {  }
 hidden:
   field_email: true
   field_first_name: true
   field_last_name: true
+  field_number: true
+  field_player_picture: true
   field_telephone: true
   links: true

@@ -1,0 +1,7 @@
+.block-views-blockplayer-tournaments-block-1 {
+  .view-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp1);
+  }
+}

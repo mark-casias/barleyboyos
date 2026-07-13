@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.player.field_first_name
     - field.field.node.player.field_last_name
     - field.field.node.player.field_number
+    - field.field.node.player.field_player_picture
     - field.field.node.player.field_telephone
     - node.type.player
   module:
+    - media_library
     - telephone
 id: node.player.default
 targetEntityType: node
@@ -46,6 +48,13 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_player_picture:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_telephone:
     type: telephone_default

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.player.field_first_name
     - field.field.node.player.field_last_name
     - field.field.node.player.field_number
+    - field.field.node.player.field_player_picture
     - field.field.node.player.field_telephone
     - node.type.player
 id: node.player.minimal
@@ -35,6 +36,7 @@ hidden:
   created: true
   field_email: true
   field_number: true
+  field_player_picture: true
   field_telephone: true
   path: true
   promote: true
