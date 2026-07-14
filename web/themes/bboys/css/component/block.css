@@ -5,3 +5,8 @@
     gap: var(--sp1);
   }
 }
+
+.block-page-title-block,
+.block-system-breadcrumb-block {
+  margin-block-end: 0;
+}

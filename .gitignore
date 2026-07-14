@@ -34,3 +34,4 @@ web/modules/contrib
 web/themes/contrib
 /.vscode
 .DS_Store
+*.mysql.gz
