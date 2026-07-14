@@ -3,7 +3,7 @@ type: theme
 base theme: olivero
 description: A flexible theme with a responsive, mobile-first layout.
 package: Custom
-logo: images/bboy-logo.jpg
+logo: images/logo-updated.png
 core_version_requirement: ^10 || ^11
 libraries:
   - bboys/global
